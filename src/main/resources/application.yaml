@@ -1,0 +1,12 @@
+graphql.servlet:
+  enabled: true
+  corsEnabled: true
+  mapping: /graphql
+
+CLIENT_URL: http://localhost:4200
+HEADERS: Content-Type,Content-Length,Connection,Date,Access-Control-Allow-Origin,Access-Control-Allow-Headers,Access-Control-Allow-Credentials,Content-Encoding,Vary,X-Cache,Via,X-XSRF-TOKEN,Authorization,Origin
+METHODS: GET,POST,PUT,OPTIONS,DELETE
+
+logging:
+  level:
+    org.springframework.security: DEBUG

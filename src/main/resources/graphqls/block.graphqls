@@ -1,0 +1,30 @@
+enum EnumBlockType {
+    TEXT
+    IMAGE
+    VIDEO
+}
+
+type BlockData {
+    id: String!
+    type: EnumBlockType!
+    data: String!
+    order: Int!
+}
+
+input BlockDataInput {
+    id: String
+    type: EnumBlockType!
+    data: String!
+    order: Int!
+}
+
+type Query {
+    blocks(page: Int, size: Int): [BlockData]!
+}
+
+type Mutation {
+    add(blockData: BlockDataInput!): BlockData!
+    delete(id: String!): BlockData!
+    save(blockData: BlockDataInput!): BlockData!
+    batchSave(blocks: [BlockDataInput]!): [BlockData]!
+}
